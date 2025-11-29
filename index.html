@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مستخرج الصور المصغرة لليوتيوب</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button class="lang-btn" onclick="toggleLanguage()">English</button>
+
+    <div class="container">
+        <h1 id="titleTxt">محمل صور <span class="neon-pink-text">يوتيوب</span></h1>
+        
+        <div class="input-group">
+            <input type="text" id="videoUrl" placeholder="الصق رابط الفيديو هنا..." autocomplete="off">
+            <button class="btn-glow" id="fetchBtn" onclick="fetchThumbnail()">جلب الصورة</button>
+        </div>
+        
+        <p class="error-msg" id="errorMsg">الرابط غير صالح! تأكد من الرابط.</p>
+
+        <div id="result">
+            <div class="thumbnail-card">
+                <img id="thumbImg" src="" alt="Thumbnail">
+            </div>
+            <button class="btn-download" onclick="downloadImage()">
+                <span id="dwnBtn">تحميل الصورة (HD)</span>
+            </button>
+            <div style="margin-top: 15px; font-size: 0.8rem; opacity: 0.7;" id="noteTxt">
+                أعلى جودة متوفرة
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
